@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp1"
+             x:Class="MauiApp1.MainPage">
+
+    <VerticalStackLayout Spacing="20" Padding="20" Background="#25a6fb">
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+            <Button Text="MAUI to Vue3" Clicked="MauiToVue3Clicked" />
+        </HorizontalStackLayout>
+        <BlazorWebView x:Name="StaWebView" HostPage="wwwroot/index.html" WidthRequest="375" HeightRequest="400">
+            <BlazorWebView.RootComponents>
+                <RootComponent Selector="app" ComponentType="{x:Type local:Main}" />
+            </BlazorWebView.RootComponents>
+        </BlazorWebView>
+    </VerticalStackLayout>
+
+</ContentPage>
